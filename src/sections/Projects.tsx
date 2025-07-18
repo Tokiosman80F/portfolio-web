@@ -1,6 +1,10 @@
+import ArrowRighIcon from "@/assets/icons/arrow-up-right.svg";
+import CheckIcon from "@/assets/icons/check-circle.svg";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
+import grainImage from "@/assets/images/grain.jpg";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import Image from "next/image";
 
 const portfolioProjects = [
   {
@@ -43,12 +47,68 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <div>
+    <section className="pb-16 | lg:py-24">
       <div className="container">
-        <p>Real World Results</p>
-        <h2>Featured Projects</h2>
-        <p>See how I transformed concepts into engaging digital e</p>
+        <div className="flex items-center justify-center">
+          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400  text-transparent bg-clip-text ">
+            Real World Results
+          </p>
+        </div>
+        <h2 className="font-serif text-3xl text-center mt-6 | md:text-5xl ">
+          Featured Projects
+        </h2>
+        <p className="text-center text-white/60 my-4 max-w-md mx-auto  | md:text-lg | lg:text-xl  ">
+          See how I transformed concepts into engaging digital experience
+        </p>
+        <div className="mt-10 grid gap-10 | md:mt-20 | lg:gap-20">
+          {portfolioProjects.map((project) => (
+            <div
+              key={project.title}
+              className="  relative overflow-hidden z-10 bg-gray-800 rounded-3xl px-8 pt-8 outline outline-1 outline-white/40 | md:px-10 md:pt-12 | lg:pt-16 lg:px-20 "
+            >
+              <div
+                className="absolute inset-0 -z-10 opacity-15"
+                style={{ backgroundImage: `url(${grainImage.src})` }}
+              ></div>
+              {/* Card Content */}
+              <div className="grid | lg:grid-cols-2 lg:gap-16">
+                <div className="lg:pb-16">
+                  <div className="inline-flex gap-2 text-sm uppercase font-bold tracking-widest  bg-gradient-to-r from-emerald-300 to-blue-400 text-transparent bg-clip-text ">
+                    <span>{project.company}</span>
+                    <span>&bull;</span>
+                    <span>{project.year}</span>
+                  </div>
+                  <h3 className="font-serif text-2xl mt-2 | md:text-4xl md:mt-5">
+                    {project.title}
+                  </h3>
+                  <hr className="border-t-2 border-white/5 mt-4 | md:mt-5" />
+                  <ul className="grid text-white/50 gap-4 mt-4 | md:mt-5">
+                    {project.results.map((result) => (
+                      <li key={result.title} className="flex  gap-2 text-sm ">
+                        <CheckIcon className="size-5 | md:size-6" />
+                        <span>{result.title}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <a href={project.link}>
+                    <button className="inline-flex items-center justify-center gap-2 mt-8 bg-white text-gray-900 font-semibold w-full h-12 rounded-xl px-6 | md:w-auto  ">
+                      <span>View Live Site</span>
+                      <ArrowRighIcon className=" size-4" />
+                    </button>
+                  </a>
+                </div>
+                <div>
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    className="mt-8 | lg:mt-0 lg:absolute lg:h-full"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
