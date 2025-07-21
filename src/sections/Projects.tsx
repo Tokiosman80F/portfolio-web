@@ -60,7 +60,7 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project) => (
             <div
               key={project.title}
-              className="  relative overflow-hidden z-10 bg-gray-800 rounded-3xl px-8 pt-8 outline outline-1 outline-white/40 | md:px-10 md:pt-12 | lg:pt-16 lg:px-20 "
+              className="  relative overflow-hidden z-5 bg-gray-800 rounded-3xl px-8 pt-8 outline outline-1 outline-white/40 | md:px-10 md:pt-12 | lg:pt-16 lg:px-20 "
             >
               <div
                 className="absolute inset-0 -z-10 opacity-15"
