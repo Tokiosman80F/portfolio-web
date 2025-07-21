@@ -2,8 +2,8 @@ import ArrowRighIcon from "@/assets/icons/arrow-up-right.svg";
 import CheckIcon from "@/assets/icons/check-circle.svg";
 import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import grainImage from "@/assets/images/grain.jpg";
 import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
 
@@ -58,14 +58,10 @@ export const ProjectsSection = () => {
 
         <div className="mt-10 grid gap-10 | md:mt-20 | lg:gap-20">
           {portfolioProjects.map((project) => (
-            <div
+            <Card
               key={project.title}
-              className="  relative overflow-hidden z-5 bg-gray-800 rounded-3xl px-8 pt-8 outline outline-1 outline-white/40 | md:px-10 md:pt-12 | lg:pt-16 lg:px-20 "
+              className="px-8 pt-8 | md:px-10 md:pt-12 | lg:pt-16 lg:px-20"
             >
-              <div
-                className="absolute inset-0 -z-10 opacity-15"
-                style={{ backgroundImage: `url(${grainImage.src})` }}
-              ></div>
               {/* Card Content */}
               <div className="grid | lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
@@ -101,7 +97,7 @@ export const ProjectsSection = () => {
                   />
                 </div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
