@@ -49,7 +49,7 @@ export const TestimonialsSection = () => {
           heading="What Client Say about Me"
           desc="Don't just take my word for it. See what my client have to say about it"
         />
-        <div className=" lg:mt-24 | mt-12 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className=" lg:mt-24 | mt-12 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
           <div className="flex flex-none gap-8">
             {testimonials.map((testimonial) => (
               <Card
