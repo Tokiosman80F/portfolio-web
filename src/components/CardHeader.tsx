@@ -7,7 +7,7 @@ const CardHeader = ({ title, desc ,className}: { title: string; desc: string ,cl
         <StarIcon className="size-9 text-emerald-300" />
         <h3 className="font-serif text-3xl">{title}</h3>
       </div>
-      <p className="text-sm text-white/60 mt-2">{desc}</p>
+      <p className="text-sm text-white/60 mt-2 max-w-sm | md:text-base ">{desc}</p>
     </div>
   );
 };
