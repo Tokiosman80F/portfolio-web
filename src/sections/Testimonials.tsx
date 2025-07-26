@@ -54,7 +54,7 @@ export const TestimonialsSection = () => {
             {testimonials.map((testimonial) => (
               <Card
                 key={testimonial.name}
-                className=" p-6 outline-0 max-w-xs | md:max-w-md md:p-8 "
+                className=" border border-white/40 outline-0 max-w-xs  | md:max-w-md md:p-8 "
               >
                 <div className="flex gap-4  items-center ">
                   <div className="size-14 bg-gray-600 rounded-full inline-flex items-center justify-center ">

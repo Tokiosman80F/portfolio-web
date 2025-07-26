@@ -8,7 +8,7 @@ const Card = ({
   return (
     <div
       className={twMerge(
-        "relative overflow-hidden z-0 bg-gray-800 rounded-3xl  outline outline-1 outline-white/40 p-6 ",
+        "relative overflow-hidden z-0 bg-gray-800 rounded-3xl  outline outline-2 outline-white/40 p-6 ",
         className
       )}
     >

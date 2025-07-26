@@ -11,7 +11,7 @@ import mapBoyEmoji from "@/assets/images/memoji-smile.png";
 import Card from "@/components/Card";
 import CardHeader from "@/components/CardHeader";
 import SectionHeader from "@/components/SectionHeader";
-import TechIcon from "@/components/TechIcon";
+import ToolboxItem from "@/components/ToolboxItem";
 import Image from "next/image";
 
 const toolboxItems = [
@@ -76,23 +76,15 @@ export const AboutSection = () => {
             </div>
           </Card>
           {/* Coding Tools */}
-          <Card>
+          <Card className="h-[320px] p-0">
             <CardHeader
               title="My Toolbox"
               desc="Explore the technologies and tool I use to craf expectional expericence"
+              className="px-6 pt-6"
             />
 
-            <div>
-              {toolboxItems.map((item) => (
-                <div
-                  key={item.title}
-                  className="inline-flex items-center gap-3 border-white/40 border  rounded-xl px-4 py-1 "
-                >
-                  <TechIcon component={item.iconType} className="bg-blue" />
-                  <div>{item.title}</div>
-                </div>
-              ))}
-            </div>
+            <ToolboxItem items={toolboxItems} className="mt-6" />
+            <ToolboxItem items={toolboxItems} className="mt-6" />
           </Card>
           {/* Hobby */}
           <Card>
