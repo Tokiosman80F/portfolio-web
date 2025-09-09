@@ -1,6 +1,11 @@
-import React from "react";
+import React, { ElementType } from "react";
 
-const TechIcon = ({ component }: { component: React.ElementType }) => {
+type TechIconProps = {
+  component: ElementType;
+  className?: string;
+};
+
+const TechIcon = ({ component: component, className }: TechIconProps) => {
   const Component = component;
 
   return <>
