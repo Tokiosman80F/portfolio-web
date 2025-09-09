@@ -4,9 +4,9 @@ import grainImage from "../assets/images/grain.jpg";
 import memojiComputer from "../assets/images/memoji-computer.png";
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0">
+    <div className="py-32 md:py-48 lg:py-60 relative z-0  ">
       <div
-        className="absolute inset-0 -z-30 opacity-10 "
+        className="absolute inset-0 -z-30 opacity-10  "
         style={{ backgroundImage: `url(${grainImage.src})` }}
       ></div>
       <div className="container">
