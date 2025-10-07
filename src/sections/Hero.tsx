@@ -4,11 +4,18 @@ import grainImage from "../assets/images/grain.jpg";
 import memojiComputer from "../assets/images/memoji-computer.png";
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0  ">
+    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip  ">
+      {/* Grain Image */}
       <div
-        className="absolute inset-0 -z-30 opacity-10  "
+        className="absolute inset-0 -z-30 opacity-5  "
         style={{ backgroundImage: `url(${grainImage.src})` }}
       ></div>
+      {/* Circle borders */}
+      <div className="size-[620px] hero-ring " ></div>
+      <div className="size-[820px] hero-ring " ></div>
+      <div className="size-[1020px] hero-ring " ></div>
+      <div className="size-[1220px] hero-ring " ></div>
+      <div className="size-[1420px] hero-ring " ></div>
       <div className="container">
         {/* Image */}
         <div className="flex flex-col items-center">
